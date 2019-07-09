@@ -10,7 +10,7 @@ function Footer() {
         <Grid container lg={7} alignItems="center" justify="space-evenly">
           <Grid className="footerLayout" item>
             <Link
-              to="/aboutus"
+              to="/"
               className="footerMenuLink"
               style={{ color: "white" }}
             >
@@ -19,11 +19,11 @@ function Footer() {
           </Grid>
           <Grid className="footerLayout" item>
             <Link
-              to="/disclaimer"
+              to="/"
               className="footerMenuLink"
               style={{ color: "white" }}
             >
-              Disclaimer
+              Privacy Policy
             </Link>
           </Grid>
         </Grid>
