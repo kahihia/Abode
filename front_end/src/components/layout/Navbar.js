@@ -93,13 +93,7 @@ class Navbar extends Component {
         </Grid>
       </Grid>
     );
-
-    let inLandingMarkup = (
-   
-    );
-
-    let notInLandingMarkup = <Grid item />;
-
+    
     return (
       <div className="navbarContainer">
         <Grid
@@ -133,10 +127,6 @@ class Navbar extends Component {
             </Link>
           </Grid>
 
-          {this.props.landing.isInLanding == true
-            ? inLandingMarkup
-            : notInLandingMarkup}
-          {this.props.auth.isAuthenticated ? loggedInMarkup : guestMarkUp}
         </Grid>
       </div>
     );
