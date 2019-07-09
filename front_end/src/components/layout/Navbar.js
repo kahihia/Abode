@@ -57,14 +57,14 @@ class Navbar extends Component {
         lg={3}
       >
         <Grid item>
-          <Link to="/register">
+          <Link to="/">
             <Button class="navButtons buttonGrey" primary>
               Sign Up
             </Button>
           </Link>
         </Grid>
         <Grid item>
-          <Link to="/login">
+          <Link to="/">
             <Button class="navButtons buttonBlue" primary>
               Login
             </Button>
@@ -95,47 +95,7 @@ class Navbar extends Component {
     );
 
     let inLandingMarkup = (
-      <Grid
-        container
-        spacing={0}
-        justify={width === "sm" ? "flex-end" : "space-around"}
-        alignItems="center"
-        xs={4}
-        sm={5}
-        md={5}
-        lg={5}
-      >
-        <Grid item className="headerMenu">
-          <AnchorLink
-            href="#topDealsAnchor"
-            offset="-450"
-            style={{ color: "white" }}
-          >
-            Deals of the Week
-          </AnchorLink>
-        </Grid>
-        <Grid item className="headerMenu">
-          <AnchorLink
-            href="#featuredCitiesAnchor"
-            offset="-500"
-            style={{ color: "white" }}
-          >
-            Featured Cities
-          </AnchorLink>
-        </Grid>
-
-        {this.props.auth.isAuthenticated ? null : (
-          <Grid item className=" headerMenuBooking">
-            <Link
-              to="/booking-not-logged-in"
-              offset="-550"
-              style={{ color: "white" }}
-            >
-              Search Booking
-            </Link>
-          </Grid>
-        )}
-      </Grid>
+   
     );
 
     let notInLandingMarkup = <Grid item />;
@@ -167,7 +127,7 @@ class Navbar extends Component {
                 </Grid>
 
                 <Grid item className="abodeHome">
-                  Abode
+                  Hotel link booking 
                 </Grid>
               </Grid>
             </Link>
