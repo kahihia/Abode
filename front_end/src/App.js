@@ -60,7 +60,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <NavBar />
+        
             <Route exact path="/" component={Landing} />
             <Route exact path="/Search" component={Search} />
             <Route
@@ -107,7 +107,6 @@ class App extends Component {
                 component={EditProfile}
               />
             </Switch>
-            <Footer />
           </div>
         </Router>
       </Provider>
