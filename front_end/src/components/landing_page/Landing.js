@@ -307,111 +307,11 @@ class Landing extends Component {
 
       return (
         <div>
-          <div style={genBackgroundImgStyle()} boxShadow={3}>
             <div className={`${classes.searchWidgetBox} fadeIn`}>
               <SearchWidget />
             </div>
-            <div class="text-block-inspiration">
-              <Link
-                to={`/cities/${this.props.landing.inspireCityId}`}
-                style={{ color: "white" }}
-              >
-                Take Me Here
-              </Link>
-            </div>
           </div>
-          <br />
-          <div
-            style={{
-              width: "auto",
-              height: "auto",
-              marginLeft: "5%",
-              marginRight: "5%"
-            }}
-          >
-            <div className="fadeIn">
-              <div>
-                <div className={classes.centerFlexbox}>
-                  <div id="topDealsAnchor" className={classes.centerFlexbox} />
-                  <Typography variant="h5" style={{ marginTop: 50 }}>
-                    Deals of the Week
-                  </Typography>
-                </div>
-                <hr className={classes.noYMarginTop} />
-                <br />
-              </div>
-
-              <Grid
-                container
-                direction={width === "xs" ? "column" : "row"}
-                justify="space-around"
-                alignItems="stretch"
-              >
-                {topDealsMarkup}
-              </Grid>
-              <div>
-                <div
-                  id="featuredCitiesAnchor"
-                  style={{ padding: 0, margin: 0 }}
-                />
-                <Typography variant="h5" style={{ marginTop: 50 }}>
-                  Featured Cities
-                </Typography>
-                <hr className={classes.noYMarginTop} />
-              </div>
-              <Grid
-                container
-                spacing={8}
-                direction="row"
-                justify="center"
-                style={{ marginBottom: 20 }}
-              >
-                {featureDestinationMarkup}
-              </Grid>
-            </div>
-          </div>
-
-          {/* <Dialog> is a material UI pop-up window. It appears if the user clicks on "Book now" for the hotel deals */}
-          <Dialog
-            maxWidth={"md"}
-            scroll={"body"}
-            fullScreen={width === "xs" ? true : false}
-            open={this.state.open}
-            onClose={this.handleClose}
-            aria-labelledby="alert-dialog-title"
-            aria-describedby="alert-dialog-description"
-          >
-            <DialogTitle className="BookingInfoTitle">
-              <div className="BookingInfoTitle">
-                Please choose your travel dates and number of rooms:
-              </div>
-            </DialogTitle>
-
-            <DialogContent>
-              <SearchWidget
-                dealPage={true}
-                dealDestination={this.state.chosenDealHotel}
-              />
-              <Grid
-                container
-                className="dealPopUpTitle"
-                direction="column"
-                justify="space-between"
-                alignItems="center"
-              >
-                <br />
-                {this.state.chosenDealHotel} <br />
-                <img src={this.state.chosenDealImage} className="dealImage" />
-              </Grid>
-            </DialogContent>
-            <DialogActions>
-              <Button onClick={this.handleClose} color="primary">
-                Close
-              </Button>
-            </DialogActions>
-          </Dialog>
-        </div>
-      );
+);
     } else {
       return <div />;
     }
