@@ -18,14 +18,7 @@ router.get("/", function(req, res) {
     var i;
     doc.sort((a, b) => b.bookings - a.bookings);
     let n = Math.floor(Math.random() * doc.length);
-    landingInfo.inspire = doc[n].inspire;
-    landingInfo.inspireCity = doc[n].name;
-    landingInfo.cityID = doc[n]._id;
-
-    //change loop limit if want more featured cities
-    for (i = 0; i < 4; i++) {
-      landingInfo.featCities.push(doc[i]);
-    }
+    
 
     return res.status(200).send(landingInfo);
 
